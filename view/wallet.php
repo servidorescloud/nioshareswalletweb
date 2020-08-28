@@ -257,17 +257,18 @@ echo "<tr><td>".$address."</t>";?>
      </script>
 
 
-  <form action="index.php" method="POST" id="2fa">
   
  
  <?php
 if($withdrawalletuser=="0" or $withdrawalletuser==""){
  ?> 
+
   <h3>1 - Download - <a target="_blank" href="https://authy.com/download/">Authy</a></h3>
   <br />
   2 - CLICK <?php echo $lang['WALLET_2FAON']; ?>
  <br />
-<form>
+<form action="index.php" method="POST" id="2fa">
+
 <input type="hidden" name="action" value="authgen" />
 <button  class="g-recaptcha" data-sitekey="6Lcig60UAAAAAKrrVRzibcx1cbq3SwqF96R-fn8s" data-callback="onSubmit"  class="btn btn-default"><?php echo $lang['WALLET_2FAON']; ?></button>
 </form><p>
@@ -283,14 +284,15 @@ if($withdrawalletuser=="1"){
  <div class="alert alert-danger" role="alert">
   <?php echo $lang['WALLET_SENDCONF']; ?>  <?php echo "$short"; ?> LOCKED
 </div>
-<form action="index.php" method="post">
-<form>
+<form action="index.php" method="POST" id="2fa">
+
 <input type="hidden" name="action" value="disauth" />
 <button type="submit" class="btn btn-default"><?php echo $lang['WALLET_2FAOFF']; ?></button>
 </form>
 <?php
 }
  ?> 
+
 </div>
   
   <div id="passawallet" class="tab-pane fade"> 
