@@ -35,7 +35,7 @@ CREATE TABLE `users` (
   `admin` varchar(1) DEFAULT NULL,
   `locked` varchar(1) DEFAULT NULL,
   `supportpin` varchar(6) DEFAULT NULL,
-  `secret` varchar(16) DEFAULT NULL,
+  `secret` varchar(65) DEFAULT NULL,
   `authused` varchar(1) DEFAULT NULL,
   `mail` varchar(250) DEFAULT NULL,
   `mailresetcode` varchar(255) DEFAULT NULL,
