@@ -337,7 +337,7 @@ protected $_codeLength = 6;
      * @param int $secretLength
      * @return string
      */
-    public function createSecret($secretLength = 16)
+    public function createSecret($secretLength = 32)
     {
         $validChars = $this->_getBase32LookupTable();
         unset($validChars[32]);
